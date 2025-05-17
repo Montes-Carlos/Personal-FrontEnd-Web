@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Avaliação Postural</title>
+  <link rel="stylesheet" href="css/studentDetails.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/posturalAssessment.css">
+</head>
+<body>
+  <header class="dpj-header">
+  <a href="studentManager.html"><img class="dpj-header-logo" src="img/logo_2.png" alt="Logo DPJ"></a>
+  
+  <div class="dpj-nav-container">
+    <div class="dpj-nav-item">
+      <a href="#" class="dpj-nav-main">Aluno</a>
+      <div class="dpj-dropdown-menu">
+        <a href="studentManager.html" class="dpj-dropdown-item">Gerenciar Alunos</a>
+        <a href="addStudent.html" class="dpj-dropdown-item">Adicionar Aluno</a>
+        <a href="studentDetails.html" class="dpj-dropdown-item">Detalhes do Aluno</a>
+        <a href="studentHistory.html" class="dpj-dropdown-item">Histórico</a>
+      </div>
+    </div>
+    
+    <div class="dpj-nav-item">
+      <a href="#" class="dpj-nav-main">Avaliações</a>
+      <div class="dpj-dropdown-menu">
+        <a href="physicalAssessment.html" class="dpj-dropdown-item">Avaliação Física</a>
+        <a href="posturalAssessment.html" class="dpj-dropdown-item">Avaliação Postural</a>
+      </div>
+    </div>
+    
+    <div class="dpj-nav-item">
+      <a href="#" class="dpj-nav-main">Treinos</a>
+      <div class="dpj-dropdown-menu">
+        <a href="predefinedWorkouts.html" class="dpj-dropdown-item">Treinos Predefinidos</a>
+        <a href="createWorkout.html" class="dpj-dropdown-item">Criar Treino</a>
+      </div>
+    </div>
+    
+    <button class="dpj-logout-btn" onclick="window.location.href='login.html'">Sair</button>
+  </div>
+</header>
+
+  <main>
+    <h1>Avaliação Postural</h1> avaliaçoes studentdetails studentehistory studentManager addstudent / treinos treinos Predefinidos criar treino
+    
+    <div class="student-info">
+      <div class="info-card">
+        <span class="info-label">Nome</span>
+        <span class="info-value" id="nome"></span>
+      </div>
+      <div class="info-card">
+        <span class="info-label">Sobrenome</span>
+        <span class="info-value" id="sobrenome"></span>
+      </div>
+      <div class="info-card">
+        <span class="info-label">Sexo</span>
+        <span class="info-value" id="sexo"></span>
+      </div>
+      <div class="info-card">
+        <span class="info-label">Altura (cm)</span>
+        <span class="info-value" id="altura"></span>
+      </div>
+    </div>
+
+    <div class="assessment-container">
+      <div class="assessment-form">
+        <h3>ANÁLISES/TESTES FUNCIONAIS</h3>
+        <div class="form-row">
+          <div class="input-group">
+            <label>Data da Avaliação</label>
+            <input type="date" id="dataAvaliacao" required>
+          </div>
+        </div>
+
+        <div class="form-sections">
+          <div class="form-section">
+            <div class="input-group">
+              <label>Formato dos pés</label>
+              <textarea id="pesFormato" rows="2"></textarea>
+            </div>
+            <div class="input-group">
+              <label>Alinhamento dos joelhos</label>
+              <textarea id="joelhosAlinhamento" rows="2"></textarea>
+            </div>
+            <div class="input-group">
+              <label>Posição das patelas</label>
+              <textarea id="patelasPosicao" rows="2"></textarea>
+            </div>
+            <div class="input-group">
+              <label>Alinhamento/Posição do quadril</label>
+              <textarea id="quadrilAlinhamento" rows="2"></textarea>
+            </div>
+            <div class="input-group">
+              <label>Alinhamento dos ombros</label>
+              <textarea id="ombrosAlinhamento" rows="2"></textarea>
+            </div>
+            <div class="input-group">
+              <label>Alinhamento da cabeça</label>
+              <textarea id="cabecaAlinhamento" rows="2"></textarea>
+            </div>
+          </div>
+
+          <div class="form-section">
+            <div class="input-group">
+              <label>Alinhamento da torácica</label>
+              <textarea id="toracicaAlinhamento" rows="2"></textarea>
+            </div>
+            <div class="input-group">
+              <label>Alinhamento cervical</label>
+              <textarea id="cervicalAlinhamento" rows="2"></textarea>
+            </div>
+            <div class="input-group">
+              <label>Alinhamento lombar</label>
+              <textarea id="lombarAlinhamento" rows="2"></textarea>
+            </div>
+            <div class="input-group">
+              <label>Hiperextensão articular</label>
+              <textarea id="hiperextensaoArticular" rows="2"></textarea>
+            </div>
+            <div class="input-group">
+              <label>Banco de Wells (POS/PAN/LOM)</label>
+              <textarea id="bancoWells" rows="2"></textarea>
+            </div>
+            <div class="input-group">
+              <label>Mobilidade de tornozelo</label>
+              <textarea id="tornozeloMobilidade" rows="2"></textarea>
+            </div>
+          </div>
+
+          <div class="form-section">
+            <div class="input-group">
+              <label>Tibial anterior</label>
+              <textarea id="tibialAnterior" rows="2"></textarea>
+            </div>
+            <div class="input-group">
+              <label>Força do reto do abdômen</label>
+              <textarea id="retoAbdomen" rows="2"></textarea>
+            </div>
+            <div class="input-group">
+              <label>Hiperatividade do íliopsoas</label>
+              <textarea id="iliopsoas" rows="2"></textarea>
+            </div>
+            <div class="input-group">
+              <label>Flexibilidade isquiotibiais</label>
+              <textarea id="isquiotibiais" rows="2"></textarea>
+            </div>
+            <div class="input-group">
+              <label>Adutores</label>
+              <textarea id="adutores" rows="2"></textarea>
+            </div>
+            <div class="input-group">
+              <label>Encurtamento peitoral maior</label>
+              <textarea id="peitoralMaior" rows="2"></textarea>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-sections">
+          <div class="form-section">
+            <div class="input-group">
+              <label>Encurtamento grande dorsal</label>
+              <textarea id="grandeDorsal" rows="2"></textarea>
+            </div>
+            <div class="input-group">
+              <label>Comprimento dos pés</label>
+              <textarea id="pesComprimento" rows="2"></textarea>
+            </div>
+            <div class="input-group">
+              <label>Ativação do glúteo máximo</label>
+              <textarea id="gluteoMaximo" rows="2"></textarea>
+            </div>
+            <div class="input-group">
+              <label>Ativação do glúteo mínimo</label>
+              <textarea id="gluteoMinimo" rows="2"></textarea>
+            </div>
+            <div class="input-group">
+              <label>Tensor da fáscia lata</label>
+              <textarea id="fasciaLata" rows="2"></textarea>
+            </div>
+          </div>
+
+          <div class="form-section">
+            <div class="input-group">
+              <label>Ativação do glúteo médio</label>
+              <textarea id="gluteoMedio" rows="2"></textarea>
+            </div>
+            <div class="input-group">
+              <label>Piriforme</label>
+              <textarea id="piriforme" rows="2"></textarea>
+            </div>
+            <div class="input-group">
+              <label>Quadrado lombar</label>
+              <textarea id="quadradoLombar" rows="2"></textarea>
+            </div>
+            <div class="input-group">
+              <label>Teste serrátil anterior</label>
+              <textarea id="serratilAnterior" rows="2"></textarea>
+            </div>
+            <div class="input-group">
+              <label>Síndrome de impacto (Yocum)</label>
+              <textarea id="sindromeImpacto" rows="2"></textarea>
+            </div>
+          </div>
+
+          <div class="form-section">
+            <div class="input-group">
+              <label>Hiperatividade do trapézio superior</label>
+              <textarea id="trapezioSuperior" rows="2"></textarea>
+            </div>
+          </div>
+        </div>
+
+        <button id="btnSalvar" class="save-btn">Salvar Avaliação</button>
+      </div>
+
+      <div class="results-container">
+        <h3>RESULTADOS</h3>
+        <div class="results-grid">
+          <div class="result-column">
+            <h4>1º TESTE</h4>
+            <div class="result-date" id="teste1Data"></div>
+            <div class="result-content" id="teste1Content"></div>
+          </div>
+          <div class="result-column">
+            <h4>2º TESTE</h4>
+            <div class="result-date" id="teste2Data"></div>
+            <div class="result-content" id="teste2Content"></div>
+          </div>
+          <div class="result-column">
+            <h4>3º TESTE</h4>
+            <div class="result-date" id="teste3Data"></div>
+            <div class="result-content" id="teste3Content"></div>
+          </div>
+          <div class="result-column">
+            <h4>4º TESTE</h4>
+            <div class="result-date" id="teste4Data"></div>
+            <div class="result-content" id="teste4Content"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="images-container">
+        <h3>ANÁLISE DE IMAGENS</h3>
+        <div class="images-row">
+          <div class="image-upload">
+            <div class="image-preview" id="imagePreview1"></div>
+            <button class="add-image-btn">+</button>
+            <input type="file" accept="image/*" class="image-input" id="imageInput1">
+            <textarea class="image-description" placeholder="Descrição da imagem 1"></textarea>
+          </div>
+          <div class="image-upload">
+            <div class="image-preview" id="imagePreview2"></div>
+            <button class="add-image-btn">+</button>
+            <input type="file" accept="image/*" class="image-input" id="imageInput2">
+            <textarea class="image-description" placeholder="Descrição da imagem 2"></textarea>
+          </div>
+          <div class="image-upload">
+            <div class="image-preview" id="imagePreview3"></div>
+            <button class="add-image-btn">+</button>
+            <input type="file" accept="image/*" class="image-input" id="imageInput3">
+            <textarea class="image-description" placeholder="Descrição da imagem 3"></textarea>
+          </div>
+          <div class="image-upload">
+            <div class="image-preview" id="imagePreview4"></div>
+            <button class="add-image-btn">+</button>
+            <input type="file" accept="image/*" class="image-input" id="imageInput4">
+            <textarea class="image-description" placeholder="Descrição da imagem 4"></textarea>
+          </div>
+        </div>
+        <div class="images-row">
+          <div class="image-upload">
+            <div class="image-preview" id="imagePreview5"></div>
+            <button class="add-image-btn">+</button>
+            <input type="file" accept="image/*" class="image-input" id="imageInput5">
+            <textarea class="image-description" placeholder="Descrição da imagem 5"></textarea>
+          </div>
+          <div class="image-upload">
+            <div class="image-preview" id="imagePreview6"></div>
+            <button class="add-image-btn">+</button>
+            <input type="file" accept="image/*" class="image-input" id="imageInput6">
+            <textarea class="image-description" placeholder="Descrição da imagem 6"></textarea>
+          </div>
+          <div class="image-upload">
+            <div class="image-preview" id="imagePreview7"></div>
+            <button class="add-image-btn">+</button>
+            <input type="file" accept="image/*" class="image-input" id="imageInput7">
+            <textarea class="image-description" placeholder="Descrição da imagem 7"></textarea>
+          </div>
+          <div class="image-upload">
+            <div class="image-preview" id="imagePreview8"></div>
+            <button class="add-image-btn">+</button>
+            <input type="file" accept="image/*" class="image-input" id="imageInput8">
+            <textarea class="image-description" placeholder="Descrição da imagem 8"></textarea>
+          </div>
+        </div>
+      </div>
+
+      <div class="delete-section">
+        <div class="styled-select">
+          <label>Excluir Avaliação:</label>
+          <select id="selectDelete"></select>
+        </div>
+        <button id="btnExcluir" class="delete-btn">Excluir</button>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/posturalAssessment.js"></script>
+</body>
+</html>

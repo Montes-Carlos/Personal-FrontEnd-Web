@@ -1,0 +1,158 @@
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #2e2e2e;
+  color: white;
+}
+
+main {
+  padding: 30px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 2.2em;
+  margin-bottom: 25px;
+  text-align: center;
+  color: #fff;
+}
+
+.management-container {
+  background-color: #3a3a3a;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.search-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.search-box {
+  display: flex;
+  flex-grow: 1;
+  max-width: 500px;
+}
+
+.search-box input {
+  flex-grow: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 5px 0 0 5px;
+  background-color: #2e2e2e;
+  color: white;
+  font-size: 1em;
+}
+
+.search-button {
+  padding: 12px 15px;
+  background-color: #d21919;
+  color: white;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.add-button {
+  background-color: #d21919;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1em;
+  transition: background-color 0.3s;
+}
+
+.add-button:hover {
+  background-color: #b31f1f;
+}
+
+.workouts-grid {
+  margin-top: 20px;
+}
+
+.workouts-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 15px;
+}
+
+.workout-card {
+  background-color: #2e2e2e;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s;
+}
+
+.workout-card:hover {
+  transform: translateY(-3px);
+}
+
+.workout-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.workout-button span {
+  font-weight: 500;
+  font-size: 1.1em;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  gap: 8px;
+}
+
+.pagination button {
+  background-color: #2e2e2e;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.pagination button:hover {
+  background-color: #444;
+}
+
+.pagination button.active {
+  background-color: #d21919;
+  font-weight: bold;
+}
+
+@media (max-width: 600px) {
+  .search-container {
+    flex-direction: column;
+  }
+  
+  .search-box {
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  .add-button {
+    width: 100%;
+  }
+  
+  .workouts-list {
+    grid-template-columns: 1fr;
+  }
+}

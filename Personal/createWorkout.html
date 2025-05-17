@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Criar/Editar Treino</title>
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/createWorkout.css">
+</head>
+<body>
+  <header class="dpj-header">
+  <a href="studentManager.html"><img class="dpj-header-logo" src="img/logo_2.png" alt="Logo DPJ"></a>
+  
+  <div class="dpj-nav-container">
+    <div class="dpj-nav-item">
+      <a href="#" class="dpj-nav-main">Aluno</a>
+      <div class="dpj-dropdown-menu">
+        <a href="studentManager.html" class="dpj-dropdown-item">Gerenciar Alunos</a>
+        <a href="addStudent.html" class="dpj-dropdown-item">Adicionar Aluno</a>
+        <a href="studentDetails.html" class="dpj-dropdown-item">Detalhes do Aluno</a>
+        <a href="studentHistory.html" class="dpj-dropdown-item">Histórico</a>
+      </div>
+    </div>
+    
+    <div class="dpj-nav-item">
+      <a href="#" class="dpj-nav-main">Avaliações</a>
+      <div class="dpj-dropdown-menu">
+        <a href="physicalAssessment.html" class="dpj-dropdown-item">Avaliação Física</a>
+        <a href="posturalAssessment.html" class="dpj-dropdown-item">Avaliação Postural</a>
+      </div>
+    </div>
+    
+    <div class="dpj-nav-item">
+      <a href="#" class="dpj-nav-main">Treinos</a>
+      <div class="dpj-dropdown-menu">
+        <a href="predefinedWorkouts.html" class="dpj-dropdown-item">Treinos Predefinidos</a>
+        <a href="createWorkout.html" class="dpj-dropdown-item">Criar Treino</a>
+      </div>
+    </div>
+    
+    <button class="dpj-logout-btn" onclick="window.location.href='login.html'">Sair</button>
+  </div>
+</header>
+  <main>
+    <h1>Criar Novo Treino</h1>
+    
+    <div class="workout-container">
+      <div class="form-section">
+        <div class="form-group">
+          <label for="workoutName">Nome do Treino</label>
+          <input type="text" id="workoutName" placeholder="Ex: Treino ABC">
+        </div>
+
+        <div class="form-group">
+          <label>Estrutura do Treino</label>
+          <div class="radio-group">
+            <label><input type="radio" name="structure" value="AB" checked> AB</label>
+            <label><input type="radio" name="structure" value="ABC"> ABC</label>
+            <label><input type="radio" name="structure" value="ABCD"> ABCD</label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="exercise">Exercício</label>
+          <select id="exercise">
+            <option value="">Selecione um exercício</option>
+            <option value="Supino Reto">Supino Reto</option>
+            <option value="Agachamento Livre">Agachamento Livre</option>
+            <option value="Barra Fixa">Barra Fixa</option>
+            <option value="Desenvolvimento">Desenvolvimento</option>
+            <option value="Rosca Direta">Rosca Direta</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="method">Método</label>
+          <select id="method">
+            <option value="Top Set">Top Set</option>
+            <option value="Drop Set">Drop Set</option>
+            <option value="Bi-Set">Bi-Set</option>
+            <option value="Tri-Set">Tri-Set</option>
+            <option value="Rest-Pause">Rest-Pause</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Séries</label>
+          <select id="sets">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3" selected>3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+        </div>
+
+        <div class="form-group" id="reps-container">
+          <label>Repetições por série</label>
+          <div class="reps-inputs"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="rest">Intervalo entre séries (segundos)</label>
+          <input type="number" id="rest" value="60" min="30" max="300">
+        </div>
+
+        <button id="addExercise" class="add-button">Adicionar Exercício</button>
+      </div>
+
+      <div class="preview-section">
+        <div class="day-tabs" id="dayTabs"></div>
+        <div class="workout-preview" id="workoutPreview"></div>
+      </div>
+    </div>
+
+    <div class="actions">
+      <button id="saveWorkout" class="save-button">Salvar Treino</button>
+    </div>
+  </main>
+
+  <script src="js/createWorkouts.js"></script>
+</body>
+</html>

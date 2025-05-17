@@ -1,0 +1,272 @@
+.student-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.info-card {
+  background-color: #3a3a3a;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.info-label {
+  display: block;
+  font-size: 0.8em;
+  color: #d21919;
+  margin-bottom: 5px;
+}
+
+.info-value {
+  font-size: 1.1em;
+  font-weight: 500;
+}
+
+.assessment-container {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.assessment-form {
+  background-color: #4a4a4a;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+}
+
+.form-row {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.form-row .input-group {
+  flex: 1;
+}
+
+.form-sections {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.form-section {
+  flex: 1;
+  background-color: #3a3a3a;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.form-section h4 {
+  color: #d21919;
+  margin-top: 0;
+  margin-bottom: 15px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #555;
+}
+
+.input-group {
+  margin-bottom: 12px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 0.85em;
+  color: #ccc;
+}
+
+.input-group input,
+.input-group textarea {
+  width: 100%;
+  padding: 8px;
+  background-color: #2e2e2e;
+  border: 1px solid #555;
+  border-radius: 5px;
+  color: white;
+}
+
+.input-group textarea {
+  min-height: 60px;
+  resize: vertical;
+}
+
+.styled-select {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.styled-select label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 0.85em;
+  color: #ccc;
+}
+
+.styled-select select {
+  width: 100%;
+  padding: 8px 30px 8px 10px;
+  background-color: #2e2e2e;
+  border: 1px solid #555;
+  border-radius: 5px;
+  color: white;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  background-size: 15px;
+}
+
+.save-btn, .delete-btn {
+  padding: 12px;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.save-btn {
+  background-color: #d21919;
+  color: white;
+}
+
+.save-btn:hover {
+  background-color: #b31f1f;
+}
+
+.delete-btn {
+  background-color: #333;
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #444;
+}
+
+.results-container {
+  background-color: #3a3a3a;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+}
+
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.result-column {
+  background-color: #2e2e2e;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.result-column h4 {
+  color: #d21919;
+  margin-top: 0;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.result-date {
+  color: #ccc;
+  font-size: 0.9em;
+  text-align: center;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #555;
+}
+
+.result-content {
+  font-size: 0.9em;
+  line-height: 1.5;
+}
+
+.images-container {
+  background-color: #3a3a3a;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+}
+
+.images-row {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.image-upload {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.image-preview {
+  width: 150px;
+  height: 300px;
+  background-color: #2e2e2e;
+  border: 2px dashed #555;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.image-preview img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.add-image-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #d21919;
+  color: white;
+  border: none;
+  font-size: 1.5em;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-input {
+  display: none;
+}
+
+.image-description {
+  width: 100%;
+  min-height: 60px;
+  padding: 8px;
+  background-color: #2e2e2e;
+  border: 1px solid #555;
+  border-radius: 5px;
+  color: white;
+  resize: vertical;
+}
+
+.delete-section {
+  display: flex;
+  gap: 10px;
+  align-items: flex-end;
+  background-color: #3a3a3a;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+}
+
+.delete-section .styled-select {
+  flex: 1;
+  margin-bottom: 0;
+}

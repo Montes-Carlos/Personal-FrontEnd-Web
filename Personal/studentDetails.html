@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dados do Aluno</title>
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/studentDetails.css" />
+</head>
+<body>
+  <header class="dpj-header">
+  <a href="studentManager.html"><img class="dpj-header-logo" src="img/logo_2.png" alt="Logo DPJ"></a>
+  
+  <div class="dpj-nav-container">
+    <div class="dpj-nav-item">
+      <a href="#" class="dpj-nav-main">Aluno</a>
+      <div class="dpj-dropdown-menu">
+        <a href="studentManager.html" class="dpj-dropdown-item">Gerenciar Alunos</a>
+        <a href="addStudent.html" class="dpj-dropdown-item">Adicionar Aluno</a>
+        <a href="studentDetails.html" class="dpj-dropdown-item">Detalhes do Aluno</a>
+        <a href="studentHistory.html" class="dpj-dropdown-item">Histórico</a>
+      </div>
+    </div>
+    
+    <div class="dpj-nav-item">
+      <a href="#" class="dpj-nav-main">Avaliações</a>
+      <div class="dpj-dropdown-menu">
+        <a href="physicalAssessment.html" class="dpj-dropdown-item">Avaliação Física</a>
+        <a href="posturalAssessment.html" class="dpj-dropdown-item">Avaliação Postural</a>
+      </div>
+    </div>
+    
+    <div class="dpj-nav-item">
+      <a href="#" class="dpj-nav-main">Treinos</a>
+      <div class="dpj-dropdown-menu">
+        <a href="predefinedWorkouts.html" class="dpj-dropdown-item">Treinos Predefinidos</a>
+        <a href="createWorkout.html" class="dpj-dropdown-item">Criar Treino</a>
+      </div>
+    </div>
+    
+    <button class="dpj-logout-btn" onclick="window.location.href='login.html'">Sair</button>
+  </div>
+</header>
+
+  <main>
+    <h1>Dados do Aluno</h1>
+
+    <form id="formAluno" class="form active">
+      <input type="text" name="nome" placeholder="Nome" required>
+      <input type="text" name="sobrenome" placeholder="Sobrenome" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <input type="date" name="dataNascimento" placeholder="Data de nascimento" required>
+      <input type="number" name="idade" placeholder="Idade" required>
+      <input type="text" name="sexo" placeholder="Sexo" required>
+      <input type="text" name="objetivo" placeholder="Objetivo">
+      <input type="text" name="altura" placeholder="Altura">
+      <input type="text" name="restricoes" placeholder="Restrições">
+      <input type="text" name="pesoInicial" placeholder="Peso Inicial">
+      <input type="text" name="pesoAtual" placeholder="Peso Atual">
+      <button type="submit" id="btnSalvar">Salvar Alterações</button>
+    </form>
+  </main>
+
+  <script src="js/studentDetails.js"></script>
+</body>
+</html>
+

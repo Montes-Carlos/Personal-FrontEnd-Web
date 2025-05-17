@@ -1,0 +1,75 @@
+/* Estilo base */
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #2e2e2e;
+  color: #ffffff;
+}
+/* MAIN */
+main {
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 2.2em;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #fff;
+}
+
+/* FORMULÁRIO */
+.form {
+  background-color: #3a3a3a;
+  padding: 30px;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.form input {
+  background: #2e2e2e;
+  border: 1px solid #555;
+  padding: 12px;
+  color: #fff;
+  border-radius: 6px;
+  font-size: 1em;
+  transition: border 0.3s;
+}
+
+.form input:focus {
+  border-color: #fff;
+  outline: none;
+}
+
+.form button {
+  grid-column: 1 / -1;
+  padding: 14px;
+  background-color: #d21919;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.form button:hover {
+  background-color: #b31f1f;
+}
+
+/* RESPONSIVO */
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .form {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Treinos Predefinidos</title>
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/predefinedWorkouts.css">
+</head>
+<body>
+  <header class="dpj-header">
+  <a href="studentManager.html"><img class="dpj-header-logo" src="img/logo_2.png" alt="Logo DPJ"></a>
+  
+  <div class="dpj-nav-container">
+    <div class="dpj-nav-item">
+      <a href="#" class="dpj-nav-main">Aluno</a>
+      <div class="dpj-dropdown-menu">
+        <a href="studentManager.html" class="dpj-dropdown-item">Gerenciar Alunos</a>
+        <a href="addStudent.html" class="dpj-dropdown-item">Adicionar Aluno</a>
+        <a href="studentDetails.html" class="dpj-dropdown-item">Detalhes do Aluno</a>
+        <a href="studentHistory.html" class="dpj-dropdown-item">Histórico</a>
+      </div>
+    </div>
+    
+    <div class="dpj-nav-item">
+      <a href="#" class="dpj-nav-main">Avaliações</a>
+      <div class="dpj-dropdown-menu">
+        <a href="physicalAssessment.html" class="dpj-dropdown-item">Avaliação Física</a>
+        <a href="posturalAssessment.html" class="dpj-dropdown-item">Avaliação Postural</a>
+      </div>
+    </div>
+    
+    <div class="dpj-nav-item">
+      <a href="#" class="dpj-nav-main">Treinos</a>
+      <div class="dpj-dropdown-menu">
+        <a href="predefinedWorkouts.html" class="dpj-dropdown-item">Treinos Predefinidos</a>
+        <a href="createWorkout.html" class="dpj-dropdown-item">Criar Treino</a>
+      </div>
+    </div>
+    
+    <button class="dpj-logout-btn" onclick="window.location.href='login.html'">Sair</button>
+  </div>
+</header>
+
+  <main>
+    <h1>Treinos Predefinidos</h1>
+    
+    <div class="management-container">
+      <div class="search-container">
+        <div class="search-box">
+          <input type="text" id="searchInput" placeholder="Procurar treino...">
+          <button id="searchButton" class="search-button">🔍</button>
+        </div>
+        <button class="add-button" id="createWorkoutButton">+ Criar Treino</button>
+      </div>
+
+      <div class="workouts-grid">
+        <div class="workouts-list" id="workoutsList"></div>
+      </div>
+
+      <div class="pagination" id="pagination"></div>
+    </div>
+  </main>
+
+  <script src="js/predefinedWorkouts.js"></script>
+</body>
+</html>

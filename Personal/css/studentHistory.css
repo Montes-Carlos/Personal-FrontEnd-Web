@@ -1,0 +1,189 @@
+.student-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.info-card {
+  background-color: #3a3a3a;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.info-label {
+  display: block;
+  font-size: 0.8em;
+  color: #d21919;
+  margin-bottom: 5px;
+}
+
+.info-value {
+  font-size: 1.1em;
+  font-weight: 500;
+}
+
+.history-container {
+  background-color: #3a3a3a;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+}
+
+.week-selector {
+  margin-bottom: 20px;
+}
+
+.week-selector label {
+  display: block;
+  margin-bottom: 8px;
+  color: #ccc;
+  font-size: 0.9em;
+}
+
+.week-selector select {
+  width: 100%;
+  padding: 10px;
+  background-color: #2e2e2e;
+  border: 1px solid #555;
+  border-radius: 5px;
+  color: white;
+  font-size: 1em;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 15px;
+}
+
+.workouts-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 15px;
+}
+
+.workout-card {
+  background-color: #2e2e2e;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.workout-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #555;
+}
+
+.workout-title {
+  color: #d21919;
+  margin: 0;
+  font-size: 1.1em;
+}
+
+.workout-date {
+  color: #ccc;
+  font-size: 0.9em;
+}
+
+.workout-status {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-size: 0.8em;
+  font-weight: bold;
+}
+
+.status-completed {
+  background-color: #4caf50;
+  color: white;
+}
+
+.status-pending {
+  background-color: #ff9800;
+  color: white;
+}
+
+.status-not-completed {
+  background-color: #f44336;
+  color: white;
+}
+
+.exercise-list {
+  margin-top: 10px;
+}
+
+.exercise-item {
+  margin-bottom: 12px;
+  border: 1px solid #444;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.exercise-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.exercise-name {
+  font-weight: bold;
+  color: #ccc;
+  margin: 0;
+}
+
+.exercise-toggle {
+  font-size: 1.2em;
+  transition: transform 0.3s;
+}
+
+.exercise-toggle.open {
+  transform: rotate(180deg);
+}
+
+.exercise-details {
+  display: none;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #444;
+}
+
+.exercise-details.show {
+  display: block;
+}
+
+.serie-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 5px;
+  margin-bottom: 5px;
+  font-size: 0.9em;
+}
+
+.serie-number {
+  color: #999;
+}
+
+.serie-reps {
+  text-align: center;
+}
+
+.serie-weight {
+  text-align: right;
+}
+
+.future-week {
+  text-align: center;
+  padding: 40px 20px;
+  color: #ccc;
+  font-size: 1.1em;
+}
+
+.not-completed {
+  color: #999;
+  font-style: italic;
+}

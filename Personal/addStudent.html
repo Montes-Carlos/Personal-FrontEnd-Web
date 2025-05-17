@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Adicionar Aluno</title>
+  <link rel="stylesheet" href="css/addStudent.css" />
+  <link rel="stylesheet" href="css/header.css">
+</head>
+<body>
+  <header class="dpj-header">
+  <a href="studentManager.html"><img class="dpj-header-logo" src="img/logo_2.png" alt="Logo DPJ"></a>
+  
+  <div class="dpj-nav-container">
+    <div class="dpj-nav-item">
+      <a href="#" class="dpj-nav-main">Aluno</a>
+      <div class="dpj-dropdown-menu">
+        <a href="studentManager.html" class="dpj-dropdown-item">Gerenciar Alunos</a>
+        <a href="addStudent.html" class="dpj-dropdown-item">Adicionar Aluno</a>
+        <a href="studentDetails.html" class="dpj-dropdown-item">Detalhes do Aluno</a>
+        <a href="studentHistory.html" class="dpj-dropdown-item">Histórico</a>
+      </div>
+    </div>
+    
+    <div class="dpj-nav-item">
+      <a href="#" class="dpj-nav-main">Avaliações</a>
+      <div class="dpj-dropdown-menu">
+        <a href="physicalAssessment.html" class="dpj-dropdown-item">Avaliação Física</a>
+        <a href="posturalAssessment.html" class="dpj-dropdown-item">Avaliação Postural</a>
+      </div>
+    </div>
+    
+    <div class="dpj-nav-item">
+      <a href="#" class="dpj-nav-main">Treinos</a>
+      <div class="dpj-dropdown-menu">
+        <a href="predefinedWorkouts.html" class="dpj-dropdown-item">Treinos Predefinidos</a>
+        <a href="createWorkout.html" class="dpj-dropdown-item">Criar Treino</a>
+      </div>
+    </div>
+    
+    <button class="dpj-logout-btn" onclick="window.location.href='login.html'">Sair</button>
+  </div>
+</header>
+
+  <h1 class="title">Adicionar Aluno</h1>
+
+  <main class="form-container">
+    <form id="formEtapa1" class="form etapa etapa1 active">
+      <div class="form-content">
+        <input type="text" placeholder="Nome" name="nome" required />
+        <input type="text" placeholder="Sobrenome" name="sobrenome" required />
+        <input type="email" placeholder="Email" name="email" required />
+        <input type="password" placeholder="Senha" name="senha" required />
+        <input type="password" placeholder="Confirmar Senha" name="confirmarSenha" required />
+        <input type="text" placeholder="CPF" name="cpf" required />
+      </div>
+      <button type="button" id="btnContinuar" class="pag-button">Continuar</button>
+    </form>
+
+    <form id="formEtapa2" class="form etapa etapa2">
+      <div class="form-content">
+        <input type="date" placeholder="Data de nascimento" name="nascimento" required />
+        <select name="sexo" required>
+          <option value="" disabled selected>Sexo</option>
+          <option value="Masculino">Masculino</option>
+          <option value="Feminino">Feminino</option>
+        </select>
+        <input type="number" placeholder="Altura (cm)" name="altura" required step="0.01" />
+        <input type="number" placeholder="Peso Inicial (kg)" name="pesoInicial" required step="0.01" />
+        <input type="number" placeholder="Peso Atual (kg)" name="pesoAtual" required step="0.01" />
+        <input type="text" placeholder="Objetivo" name="objetivo" required />
+        <textarea placeholder="Restrições" name="restricoes"></textarea>
+      </div>
+      <div class="form-buttons">
+        <button type="button" id="btnVoltar" class="pag-button">Voltar</button>
+        <button type="submit" id="btnSalvar" class="pag-button">Salvar Aluno</button>
+      </div>
+    </form>
+  </main>
+
+  <script src="js/addStudent.js"></script>
+</body>
+</html>

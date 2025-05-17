@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Avaliação Física</title>
+  <link rel="stylesheet" href="css/studentDetails.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/physicalAssessment.css">
+</head>
+<body>
+  <header class="dpj-header">
+  <a href="studentManager.html"><img class="dpj-header-logo" src="img/logo_2.png" alt="Logo DPJ"></a>
+  
+  <div class="dpj-nav-container">
+    <div class="dpj-nav-item">
+      <a href="#" class="dpj-nav-main">Aluno</a>
+      <div class="dpj-dropdown-menu">
+        <a href="studentManager.html" class="dpj-dropdown-item">Gerenciar Alunos</a>
+        <a href="addStudent.html" class="dpj-dropdown-item">Adicionar Aluno</a>
+        <a href="studentDetails.html" class="dpj-dropdown-item">Detalhes do Aluno</a>
+        <a href="studentHistory.html" class="dpj-dropdown-item">Histórico</a>
+      </div>
+    </div>
+    
+    <div class="dpj-nav-item">
+      <a href="#" class="dpj-nav-main">Avaliações</a>
+      <div class="dpj-dropdown-menu">
+        <a href="physicalAssessment.html" class="dpj-dropdown-item">Avaliação Física</a>
+        <a href="posturalAssessment.html" class="dpj-dropdown-item">Avaliação Postural</a>
+      </div>
+    </div>
+    
+    <div class="dpj-nav-item">
+      <a href="#" class="dpj-nav-main">Treinos</a>
+      <div class="dpj-dropdown-menu">
+        <a href="predefinedWorkouts.html" class="dpj-dropdown-item">Treinos Predefinidos</a>
+        <a href="createWorkout.html" class="dpj-dropdown-item">Criar Treino</a>
+      </div>
+    </div>
+    
+    <button class="dpj-logout-btn" onclick="window.location.href='login.html'">Sair</button>
+  </div>
+</header>
+
+  <main>
+    <h1>Avaliação Física</h1>
+    
+    <div class="student-info">
+      <div class="info-card">
+        <span class="info-label">Nome</span>
+        <span class="info-value" id="nome"></span>
+      </div>
+      <div class="info-card">
+        <span class="info-label">Sobrenome</span>
+        <span class="info-value" id="sobrenome"></span>
+      </div>
+      <div class="info-card">
+        <span class="info-label">Sexo</span>
+        <span class="info-value" id="sexo"></span>
+      </div>
+      <div class="info-card">
+        <span class="info-label">Altura (cm)</span>
+        <span class="info-value" id="altura"></span>
+      </div>
+      <div class="info-card">
+        <span class="info-label">Peso Inicial (kg)</span>
+        <span class="info-value" id="pesoInicial"></span>
+      </div>
+    </div>
+
+    <div class="assessment-container">
+      <div class="assessment-form">
+        <h3>Nova Medição</h3>
+        <div class="form-row">
+          <div class="input-group">
+            <label>Data da Avaliação</label>
+            <input type="date" id="dataAvaliacao" required>
+          </div>
+          <div class="input-group">
+            <label>Peso Atual (kg)</label>
+            <input type="number" id="pesoAtual" required>
+          </div>
+        </div>
+
+        <div class="form-sections">
+          <div class="form-section">
+            <h4>Medidas (cm)</h4>
+            <div class="input-group">
+            <label>Peitoral</label>
+            <input type="number" id="peitoral" class="medida">
+          </div>
+          <div class="input-group">
+            <label>Cintura</label>
+            <input type="number" id="cintura" class="medida">
+          </div>
+          <div class="input-group">
+            <label>Abdômen</label>
+            <input type="number" id="abdomen" class="medida">
+          </div>
+          <div class="input-group">
+            <label>Quadril</label>
+            <input type="number" id="quadril" class="medida">
+          </div>
+          <div class="input-group">
+            <label>Coxa Direita</label>
+            <input type="number" id="coxaDireita" class="medida">
+          </div>
+          <div class="input-group">
+            <label>Coxa Esquerda</label>
+            <input type="number" id="coxaEsquerda" class="medida">
+          </div>
+          <div class="input-group">
+            <label>Panturrilha Direita</label>
+            <input type="number" id="panturrilhaDireita" class="medida">
+          </div>
+          <div class="input-group">
+            <label>Panturrilha Esquerda</label>
+            <input type="number" id="panturrilhaEsquerda" class="medida">
+          </div>
+          <div class="input-group">
+            <label>Antebraço Direito</label>
+            <input type="number" id="antebracoDireito" class="medida">
+          </div>
+          <div class="input-group">
+            <label>Antebraço Esquerdo</label>
+            <input type="number" id="antebracoEsquerdo" class="medida">
+          </div>
+          <div class="input-group">
+            <label>Braço Direito</label>
+            <input type="number" id="bracoDireito" class="medida">
+          </div>
+          <div class="input-group">
+            <label>Braço D. Contraído</label>
+            <input type="number" id="bracoDireitoContraido" class="medida">
+          </div>
+          <div class="input-group">
+            <label>Braço Esquerdo</label>
+            <input type="number" id="bracoEsquerdo" class="medida">
+          </div>
+          <div class="input-group">
+            <label>Braço E. Contraído</label>
+            <input type="number" id="bracoEsquerdoContraido" class="medida">
+          </div>
+          </div>
+
+          <div class="form-section">
+            <h4>Dobras Cutâneas (mm)</h4>
+            <div class="input-group">
+              <label>Peitoral</label>
+              <input type="number" id="dobraPeitoral" class="dobra">
+            </div>
+            <div class="input-group">
+              <label>Axilar Média</label>
+              <input type="number" id="dobraAxilar" class="dobra">
+            </div>
+            <div class="input-group">
+              <label>Abdômen</label>
+              <input type="number" id="dobraAbdomen" class="dobra">
+            </div>
+            <div class="input-group">
+              <label>Coxa</label>
+              <input type="number" id="dobraCoxa" class="dobra">
+            </div>
+            <div class="input-group">
+              <label>Subescapular</label>
+              <input type="number" id="dobraSubescapular" class="dobra">
+            </div>
+            <div class="input-group">
+              <label>Tríceps</label>
+              <input type="number" id="dobraTriceps" class="dobra">
+            </div>
+            <div class="input-group">
+              <label>Supra Ilíaca</label>
+              <input type="number" id="dobraSupraIliaca" class="dobra">
+            </div>
+            <div class="input-group">
+              <label>Supra Ilíaca P.</label>
+              <input type="number" id="dobraSupraIliacaP" class="dobra">
+            </div>
+            <div class="input-group">
+              <label>Somatória</label>
+              <input type="number" id="somaDobras" readonly>
+            </div>
+          </div>
+
+          <div class="form-section">
+            <h4>Resultados</h4>
+            <div class="input-group">
+              <label>Peso Corporal (kg)</label>
+              <input type="number" id="pesoCorporal" readonly>
+            </div>
+            <div class="input-group">
+              <label>Densidade Corporal</label>
+              <input type="number" id="densidadeCorporal">
+            </div>
+            <div class="input-group">
+              <label>% Gordura</label>
+              <input type="number" id="gorduraPercentual">
+            </div>
+            <div class="input-group">
+              <label>Peso Gordura (kg)</label>
+              <input type="number" id="pesoGordura" readonly>
+            </div>
+            <div class="input-group">
+              <label>Peso Livre Gordura (kg)</label>
+              <input type="number" id="pesoLivreGordura" readonly>
+            </div>
+          </div>
+        </div>
+
+        <button id="btnSalvar" class="save-btn">Salvar Avaliação</button>
+      </div>
+
+      <div class="history-container">
+        <div class="filter-section">
+          <div class="styled-select">
+            <label>Filtrar por:</label>
+            <select id="filterType">
+              <option value="todas">Todas as medidas</option>
+              <option value="medidas">Medidas (cm)</option>
+              <option value="dobras">Dobras Cutâneas (mm)</option>
+              <option value="resultados">Resultados</option>
+            </select>
+          </div>
+        </div>
+        <div class="history-columns" id="historicoColunas"></div>
+      </div>
+
+      <div class="comparison-section">
+        <div class="comparison-controls">
+          <div class="styled-select">
+            <label>Comparar:</label>
+            <select id="selectAvaliacao1"></select>
+          </div>
+          <div class="styled-select">
+            <select id="selectAvaliacao2"></select>
+          </div>
+          <button id="btnComparar">Comparar</button>
+        </div>
+        <div class="evolution-column" id="evolucaoColuna"></div>
+      </div>
+
+      <div class="delete-section">
+        <div class="styled-select">
+          <label>Excluir Avaliação:</label>
+          <select id="selectDelete"></select>
+        </div>
+        <button id="btnExcluir" class="delete-btn">Excluir</button>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/physicalAssessment.js"></script>
+</body>
+</html>
