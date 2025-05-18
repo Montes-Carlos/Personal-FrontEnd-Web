@@ -9,38 +9,38 @@
 </head>
 <body>
   <header class="dpj-header">
-  <a href="studentManager.html"><img class="dpj-header-logo" src="img/logo_nome_1.png" alt="Logo DPJ"></a>
-  
-  <div class="dpj-nav-container">
-    <div class="dpj-nav-item">
-      <a href="#" class="dpj-nav-main">Aluno</a>
-      <div class="dpj-dropdown-menu">
-        <a href="studentManager.html" class="dpj-dropdown-item">Gerenciar Alunos</a>
-        <a href="addStudent.html" class="dpj-dropdown-item">Adicionar Aluno</a>
-        <a href="studentDetails.html" class="dpj-dropdown-item">Detalhes do Aluno</a>
-        <a href="studentHistory.html" class="dpj-dropdown-item">Histórico</a>
-      </div>
-    </div>
+    <a href="studentManager.html"><img class="dpj-header-logo" src="img/logo_nome_6.png" alt="Logo DPJ"></a>
     
-    <div class="dpj-nav-item">
-      <a href="#" class="dpj-nav-main">Avaliações</a>
-      <div class="dpj-dropdown-menu">
-        <a href="physicalAssessment.html" class="dpj-dropdown-item">Avaliação Física</a>
-        <a href="posturalAssessment.html" class="dpj-dropdown-item">Avaliação Postural</a>
+    <div class="dpj-nav-container">
+      <div class="dpj-nav-item">
+        <a href="#" class="dpj-nav-main">Aluno</a>
+        <div class="dpj-dropdown-menu">
+          <a href="studentManager.html" class="dpj-dropdown-item">Gerenciar Alunos</a>
+          <a href="addStudent.html" class="dpj-dropdown-item">Adicionar Aluno</a>
+          <a href="studentDetails.html" class="dpj-dropdown-item">Detalhes do Aluno</a>
+          <a href="studentHistory.html" class="dpj-dropdown-item">Histórico</a>
+        </div>
       </div>
-    </div>
-    
-    <div class="dpj-nav-item">
-      <a href="#" class="dpj-nav-main">Treinos</a>
-      <div class="dpj-dropdown-menu">
-        <a href="predefinedWorkouts.html" class="dpj-dropdown-item">Treinos Predefinidos</a>
-        <a href="createWorkout.html" class="dpj-dropdown-item">Criar Treino</a>
+      
+      <div class="dpj-nav-item">
+        <a href="#" class="dpj-nav-main">Avaliações</a>
+        <div class="dpj-dropdown-menu">
+          <a href="physicalAssessment.html" class="dpj-dropdown-item">Avaliação Física</a>
+          <a href="posturalAssessment.html" class="dpj-dropdown-item">Avaliação Postural</a>
+        </div>
       </div>
+      
+      <div class="dpj-nav-item">
+        <a href="#" class="dpj-nav-main">Treinos</a>
+        <div class="dpj-dropdown-menu">
+          <a href="predefinedWorkouts.html" class="dpj-dropdown-item">Treinos Predefinidos</a>
+          <a href="createWorkout.html" class="dpj-dropdown-item">Criar Treino</a>
+        </div>
+      </div>
+      
+      <button class="dpj-logout-btn" onclick="window.location.href='login.html'">Sair</button>
     </div>
-    
-    <button class="dpj-logout-btn" onclick="window.location.href='login.html'">Sair</button>
-  </div>
-</header>
+  </header>
 
   <main>
     <h1>Gerenciador de Alunos</h1>
@@ -49,19 +49,124 @@
       <div class="search-container">
         <div class="search-box">
           <input type="text" placeholder="Procurar aluno por nome...">
-          <button class="search-button">🔍</button>
+          <button class="search-button"><img src="img/lupa_branca.png" alt="" class="lupa"></button>
         </div>
         <button class="add-button" onclick="window.location.href='addStudent.html'">+ Adicionar aluno</button>
       </div>
 
-      <div class="students-grid" id="studentsGrid">
-        <div class="students-list"></div>
+      <div class="students-grid">
+        <div class="students-list">
+          <!-- Alunos estáticos -->
+          <div class="student-card">
+            <div class="student-button">
+              <span>Aluno 1</span>
+              <div class="dropdown-container">
+                <button class="menu-toggle">⋮</button>
+                <div class="dropdown-menu">
+                  <a href="studentDetails.html" class="dropdown-item">Editar Informações</a>
+                  <a href="predefinedWorkouts.html" class="dropdown-item">Editar Treino</a>
+                  <a href="physicalAssessment.html" class="dropdown-item">Avaliação Física</a>
+                  <a href="posturalAssessment.html" class="dropdown-item">Avaliação Postural</a>
+                  <a href="studentHistory.html" class="dropdown-item">Histórico de Carga</a>
+                  <a href="#" class="dropdown-item">Desabilitar Aluno</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="student-card">
+            <div class="student-button">
+              <span>Aluno 2</span>
+              <div class="dropdown-container">
+                <button class="menu-toggle">⋮</button>
+                <div class="dropdown-menu">
+                  <a href="studentDetails.html" class="dropdown-item">Editar Informações</a>
+                  <a href="predefinedWorkouts.html" class="dropdown-item">Editar Treino</a>
+                  <a href="physicalAssessment.html" class="dropdown-item">Avaliação Física</a>
+                  <a href="posturalAssessment.html" class="dropdown-item">Avaliação Postural</a>
+                  <a href="studentHistory.html" class="dropdown-item">Histórico de Carga</a>
+                  <a href="#" class="dropdown-item">Desabilitar Aluno</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="student-card">
+            <div class="student-button">
+              <span>Aluno 3</span>
+              <div class="dropdown-container">
+                <button class="menu-toggle">⋮</button>
+                <div class="dropdown-menu">
+                  <a href="studentDetails.html" class="dropdown-item">Editar Informações</a>
+                  <a href="predefinedWorkouts.html" class="dropdown-item">Editar Treino</a>
+                  <a href="physicalAssessment.html" class="dropdown-item">Avaliação Física</a>
+                  <a href="posturalAssessment.html" class="dropdown-item">Avaliação Postural</a>
+                  <a href="studentHistory.html" class="dropdown-item">Histórico de Carga</a>
+                  <a href="#" class="dropdown-item">Desabilitar Aluno</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="student-card">
+            <div class="student-button">
+              <span>Aluno 4</span>
+              <div class="dropdown-container">
+                <button class="menu-toggle">⋮</button>
+                <div class="dropdown-menu">
+                  <a href="studentDetails.html" class="dropdown-item">Editar Informações</a>
+                  <a href="predefinedWorkouts.html" class="dropdown-item">Editar Treino</a>
+                  <a href="physicalAssessment.html" class="dropdown-item">Avaliação Física</a>
+                  <a href="posturalAssessment.html" class="dropdown-item">Avaliação Postural</a>
+                  <a href="studentHistory.html" class="dropdown-item">Histórico de Carga</a>
+                  <a href="#" class="dropdown-item">Desabilitar Aluno</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="student-card">
+            <div class="student-button">
+              <span>Aluno 5</span>
+              <div class="dropdown-container">
+                <button class="menu-toggle">⋮</button>
+                <div class="dropdown-menu">
+                  <a href="studentDetails.html" class="dropdown-item">Editar Informações</a>
+                  <a href="predefinedWorkouts.html" class="dropdown-item">Editar Treino</a>
+                  <a href="physicalAssessment.html" class="dropdown-item">Avaliação Física</a>
+                  <a href="posturalAssessment.html" class="dropdown-item">Avaliação Postural</a>
+                  <a href="studentHistory.html" class="dropdown-item">Histórico de Carga</a>
+                  <a href="#" class="dropdown-item">Desabilitar Aluno</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="student-card">
+            <div class="student-button">
+              <span>Aluno 6</span>
+              <div class="dropdown-container">
+                <button class="menu-toggle">⋮</button>
+                <div class="dropdown-menu">
+                  <a href="studentDetails.html" class="dropdown-item">Editar Informações</a>
+                  <a href="predefinedWorkouts.html" class="dropdown-item">Editar Treino</a>
+                  <a href="physicalAssessment.html" class="dropdown-item">Avaliação Física</a>
+                  <a href="posturalAssessment.html" class="dropdown-item">Avaliação Postural</a>
+                  <a href="studentHistory.html" class="dropdown-item">Histórico de Carga</a>
+                  <a href="#" class="dropdown-item">Desabilitar Aluno</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="pagination"></div>
+      <div class="pagination">
+        <button class="active">1</button>
+        <button>2</button>
+        <button>3</button>
+      </div>
     </div>
   </main>
-
-  <script src="js/studentManager.js"></script>
 </body>
 </html>

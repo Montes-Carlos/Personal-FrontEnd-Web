@@ -9,38 +9,39 @@
 </head>
 <body>
   <header class="dpj-header">
-  <a href="studentManager.html"><img class="dpj-header-logo" src="img/logo_2.png" alt="Logo DPJ"></a>
-  
-  <div class="dpj-nav-container">
-    <div class="dpj-nav-item">
-      <a href="#" class="dpj-nav-main">Aluno</a>
-      <div class="dpj-dropdown-menu">
-        <a href="studentManager.html" class="dpj-dropdown-item">Gerenciar Alunos</a>
-        <a href="addStudent.html" class="dpj-dropdown-item">Adicionar Aluno</a>
-        <a href="studentDetails.html" class="dpj-dropdown-item">Detalhes do Aluno</a>
-        <a href="studentHistory.html" class="dpj-dropdown-item">Histórico</a>
-      </div>
-    </div>
+    <a href="studentManager.html"><img class="dpj-header-logo" src="img/logo_nome_6.png" alt="Logo DPJ"></a>
     
-    <div class="dpj-nav-item">
-      <a href="#" class="dpj-nav-main">Avaliações</a>
-      <div class="dpj-dropdown-menu">
-        <a href="physicalAssessment.html" class="dpj-dropdown-item">Avaliação Física</a>
-        <a href="posturalAssessment.html" class="dpj-dropdown-item">Avaliação Postural</a>
+    <div class="dpj-nav-container">
+      <div class="dpj-nav-item">
+        <a href="#" class="dpj-nav-main">Aluno</a>
+        <div class="dpj-dropdown-menu">
+          <a href="studentManager.html" class="dpj-dropdown-item">Gerenciar Alunos</a>
+          <a href="addStudent.html" class="dpj-dropdown-item">Adicionar Aluno</a>
+          <a href="studentDetails.html" class="dpj-dropdown-item">Detalhes do Aluno</a>
+          <a href="studentHistory.html" class="dpj-dropdown-item">Histórico</a>
+        </div>
       </div>
-    </div>
-    
-    <div class="dpj-nav-item">
-      <a href="#" class="dpj-nav-main">Treinos</a>
-      <div class="dpj-dropdown-menu">
-        <a href="predefinedWorkouts.html" class="dpj-dropdown-item">Treinos Predefinidos</a>
-        <a href="createWorkout.html" class="dpj-dropdown-item">Criar Treino</a>
+      
+      <div class="dpj-nav-item">
+        <a href="#" class="dpj-nav-main">Avaliações</a>
+        <div class="dpj-dropdown-menu">
+          <a href="physicalAssessment.html" class="dpj-dropdown-item">Avaliação Física</a>
+          <a href="posturalAssessment.html" class="dpj-dropdown-item">Avaliação Postural</a>
+        </div>
       </div>
+      
+      <div class="dpj-nav-item">
+        <a href="#" class="dpj-nav-main">Treinos</a>
+        <div class="dpj-dropdown-menu">
+          <a href="predefinedWorkouts.html" class="dpj-dropdown-item">Treinos Predefinidos</a>
+          <a href="createWorkout.html" class="dpj-dropdown-item">Criar Treino</a>
+        </div>
+      </div>
+      
+      <button class="dpj-logout-btn" onclick="window.location.href='login.html'">Sair</button>
     </div>
-    
-    <button class="dpj-logout-btn" onclick="window.location.href='login.html'">Sair</button>
-  </div>
-</header>
+  </header>
+
   <main>
     <h1>Criar Novo Treino</h1>
     
@@ -48,15 +49,20 @@
       <div class="form-section">
         <div class="form-group">
           <label for="workoutName">Nome do Treino</label>
-          <input type="text" id="workoutName" placeholder="Ex: Treino ABC">
+          <input type="text" id="workoutName" placeholder="Ex: Treino ABC" value="Treino de Hipertrofia">
         </div>
 
         <div class="form-group">
           <label>Estrutura do Treino</label>
           <div class="radio-group">
-            <label><input type="radio" name="structure" value="AB" checked> AB</label>
-            <label><input type="radio" name="structure" value="ABC"> ABC</label>
-            <label><input type="radio" name="structure" value="ABCD"> ABCD</label>
+            <input type="radio" id="structure-ab" name="structure" value="AB" checked>
+            <label for="structure-ab">AB</label>
+            
+            <input type="radio" id="structure-abc" name="structure" value="ABC">
+            <label for="structure-abc">ABC</label>
+            
+            <input type="radio" id="structure-abcd" name="structure" value="ABCD">
+            <label for="structure-abcd">ABCD</label>
           </div>
         </div>
 
@@ -96,7 +102,11 @@
 
         <div class="form-group" id="reps-container">
           <label>Repetições por série</label>
-          <div class="reps-inputs"></div>
+          <div class="reps-inputs">
+            <input type="number" class="rep-input" placeholder="Série 1" min="1" max="50" value="12">
+            <input type="number" class="rep-input" placeholder="Série 2" min="1" max="50" value="10">
+            <input type="number" class="rep-input" placeholder="Série 3" min="1" max="50" value="8">
+          </div>
         </div>
 
         <div class="form-group">
@@ -104,20 +114,38 @@
           <input type="number" id="rest" value="60" min="30" max="300">
         </div>
 
-        <button id="addExercise" class="add-button">Adicionar Exercício</button>
+        <button class="add-button">Adicionar Exercício</button>
       </div>
 
       <div class="preview-section">
-        <div class="day-tabs" id="dayTabs"></div>
-        <div class="workout-preview" id="workoutPreview"></div>
+        <div class="day-tabs">
+          <div class="day-tab active" data-day="A">Dia A</div>
+          <div class="day-tab" data-day="B">Dia B</div>
+        </div>
+        
+        <div class="workout-preview">
+          <div class="exercise-item">
+            <h3>Supino Reto</h3>
+            <p><strong>Método:</strong> Top Set</p>
+            <p><strong>Séries:</strong> 3</p>
+            <p><strong>Repetições:</strong> 12, 10, 8</p>
+            <p><strong>Intervalo:</strong> 60s</p>
+          </div>
+          
+          <div class="exercise-item">
+            <h3>Barra Fixa</h3>
+            <p><strong>Método:</strong> Drop Set</p>
+            <p><strong>Séries:</strong> 3</p>
+            <p><strong>Repetições:</strong> 8, 6, 4</p>
+            <p><strong>Intervalo:</strong> 60s</p>
+          </div>
+        </div>
       </div>
     </div>
 
     <div class="actions">
-      <button id="saveWorkout" class="save-button">Salvar Treino</button>
+      <button class="save-button" onclick="window.location.href='predefinedWorkouts.html'">Salvar Treino</button>
     </div>
   </main>
-
-  <script src="js/createWorkouts.js"></script>
 </body>
 </html>

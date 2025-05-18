@@ -10,38 +10,38 @@
 </head>
 <body>
   <header class="dpj-header">
-  <a href="studentManager.html"><img class="dpj-header-logo" src="img/logo_2.png" alt="Logo DPJ"></a>
-  
-  <div class="dpj-nav-container">
-    <div class="dpj-nav-item">
-      <a href="#" class="dpj-nav-main">Aluno</a>
-      <div class="dpj-dropdown-menu">
-        <a href="studentManager.html" class="dpj-dropdown-item">Gerenciar Alunos</a>
-        <a href="addStudent.html" class="dpj-dropdown-item">Adicionar Aluno</a>
-        <a href="studentDetails.html" class="dpj-dropdown-item">Detalhes do Aluno</a>
-        <a href="studentHistory.html" class="dpj-dropdown-item">Histórico</a>
-      </div>
-    </div>
+    <a href="studentManager.html"><img class="dpj-header-logo" src="img/logo_nome_6.png" alt="Logo DPJ"></a>
     
-    <div class="dpj-nav-item">
-      <a href="#" class="dpj-nav-main">Avaliações</a>
-      <div class="dpj-dropdown-menu">
-        <a href="physicalAssessment.html" class="dpj-dropdown-item">Avaliação Física</a>
-        <a href="posturalAssessment.html" class="dpj-dropdown-item">Avaliação Postural</a>
+    <div class="dpj-nav-container">
+      <div class="dpj-nav-item">
+        <a href="#" class="dpj-nav-main">Aluno</a>
+        <div class="dpj-dropdown-menu">
+          <a href="studentManager.html" class="dpj-dropdown-item">Gerenciar Alunos</a>
+          <a href="addStudent.html" class="dpj-dropdown-item">Adicionar Aluno</a>
+          <a href="studentDetails.html" class="dpj-dropdown-item">Detalhes do Aluno</a>
+          <a href="studentHistory.html" class="dpj-dropdown-item">Histórico</a>
+        </div>
       </div>
-    </div>
-    
-    <div class="dpj-nav-item">
-      <a href="#" class="dpj-nav-main">Treinos</a>
-      <div class="dpj-dropdown-menu">
-        <a href="predefinedWorkouts.html" class="dpj-dropdown-item">Treinos Predefinidos</a>
-        <a href="createWorkout.html" class="dpj-dropdown-item">Criar Treino</a>
+      
+      <div class="dpj-nav-item">
+        <a href="#" class="dpj-nav-main">Avaliações</a>
+        <div class="dpj-dropdown-menu">
+          <a href="physicalAssessment.html" class="dpj-dropdown-item">Avaliação Física</a>
+          <a href="posturalAssessment.html" class="dpj-dropdown-item">Avaliação Postural</a>
+        </div>
       </div>
+      
+      <div class="dpj-nav-item">
+        <a href="#" class="dpj-nav-main">Treinos</a>
+        <div class="dpj-dropdown-menu">
+          <a href="predefinedWorkouts.html" class="dpj-dropdown-item">Treinos Predefinidos</a>
+          <a href="createWorkout.html" class="dpj-dropdown-item">Criar Treino</a>
+        </div>
+      </div>
+      
+      <button class="dpj-logout-btn" onclick="window.location.href='login.html'">Sair</button>
     </div>
-    
-    <button class="dpj-logout-btn" onclick="window.location.href='login.html'">Sair</button>
-  </div>
-</header>
+  </header>
 
   <main>
     <h1>Histórico de Carga</h1>
@@ -49,22 +49,22 @@
     <div class="student-info">
       <div class="info-card">
         <span class="info-label">Nome</span>
-        <span class="info-value" id="nome"></span>
+        <span class="info-value">Aluno 1</span>
       </div>
       <div class="info-card">
         <span class="info-label">Sobrenome</span>
-        <span class="info-value" id="sobrenome"></span>
+        <span class="info-value">Aluno 1</span>
       </div>
       <div class="info-card">
         <span class="info-label">Data de Início</span>
-        <span class="info-value" id="dataInicio"></span>
+        <span class="info-value">01/01/2025</span>
       </div>
     </div>
 
     <div class="history-container">
       <div class="week-selector">
         <label>Selecione a Semana:</label>
-        <select id="weekSelect">
+        <select>
           <option value="1">Semana 1</option>
           <option value="2">Semana 2</option>
           <option value="3">Semana 3</option>
@@ -72,10 +72,515 @@
         </select>
       </div>
 
-      <div class="workouts-container" id="workoutsContainer"></div>
+      <div class="workouts-container">
+        <!-- Treino A - Concluído -->
+        <div class="workout-card">
+          <div class="workout-header">
+            <h3 class="workout-title">Treino A - Peito/Tríceps</h3>
+            <div>
+              <span class="workout-date">02/06/2024</span>
+              <span class="workout-status status-completed">Concluído</span>
+            </div>
+          </div>
+          <div class="exercise-list">
+            <div class="exercise-item">
+              <input type="checkbox" id="exercise-1" class="exercise-toggle">
+              <label for="exercise-1" class="exercise-header">
+                <h4 class="exercise-name">Supino Reto com barra</h4>
+                <span class="exercise-icon">▼</span>
+              </label>
+              <div class="exercise-details">
+                <div class="serie-item">
+                  <span class="serie-number">Série 1</span>
+                  <span class="serie-reps">12 reps</span>
+                  <span class="serie-weight">40 kg</span>
+                </div>
+                <div class="serie-item">
+                  <span class="serie-number">Série 2</span>
+                  <span class="serie-reps">10 reps</span>
+                  <span class="serie-weight">45 kg</span>
+                </div>
+                <div class="serie-item">
+                  <span class="serie-number">Série 3</span>
+                  <span class="serie-reps">12 reps</span>
+                  <span class="serie-weight">40 kg</span>
+                </div>
+                <div class="serie-item">
+                  <span class="serie-number">Série 4</span>
+                  <span class="serie-reps">10 reps</span>
+                  <span class="serie-weight">45 kg</span>
+                </div>
+                <div class="serie-item">
+                  <span class="serie-number">Série 5</span>
+                  <span class="serie-reps">12 reps</span>
+                  <span class="serie-weight">40 kg</span>
+                </div>
+              </div>
+              
+            </div>
+            <div class="exercise-item">
+              <input type="checkbox" id="exercise-1" class="exercise-toggle">
+              <label for="exercise-1" class="exercise-header">
+                <h4 class="exercise-name">Supino inclinado com halteres</h4>
+                <span class="exercise-icon">▼</span>
+              </label>
+              <div class="exercise-details">
+                <div class="serie-item">
+                  <span class="serie-number">Série 1</span>
+                  <span class="serie-reps">12 reps</span>
+                  <span class="serie-weight">40 kg</span>
+                </div>
+                <div class="serie-item">
+                  <span class="serie-number">Série 2</span>
+                  <span class="serie-reps">10 reps</span>
+                  <span class="serie-weight">45 kg</span>
+                </div>
+              </div>
+            </div>
+            <div class="exercise-item">
+              <input type="checkbox" id="exercise-1" class="exercise-toggle">
+              <label for="exercise-1" class="exercise-header">
+                <h4 class="exercise-name">Crucifixo reto com halteres</h4>
+                <span class="exercise-icon">▼</span>
+              </label>
+              <div class="exercise-details">
+                <div class="serie-item">
+                  <span class="serie-number">Série 1</span>
+                  <span class="serie-reps">12 reps</span>
+                  <span class="serie-weight">40 kg</span>
+                </div>
+                <div class="serie-item">
+                  <span class="serie-number">Série 2</span>
+                  <span class="serie-reps">10 reps</span>
+                  <span class="serie-weight">45 kg</span>
+                </div>
+              </div>
+            </div>
+            <div class="exercise-item">
+              <input type="checkbox" id="exercise-1" class="exercise-toggle">
+              <label for="exercise-1" class="exercise-header">
+                <h4 class="exercise-name">Crossover no cabo</h4>
+                <span class="exercise-icon">▼</span>
+              </label>
+              <div class="exercise-details">
+                <div class="serie-item">
+                  <span class="serie-number">Série 1</span>
+                  <span class="serie-reps">12 reps</span>
+                  <span class="serie-weight">40 kg</span>
+                </div>
+                <div class="serie-item">
+                  <span class="serie-number">Série 2</span>
+                  <span class="serie-reps">10 reps</span>
+                  <span class="serie-weight">45 kg</span>
+                </div>
+              </div>
+            </div>
+            <div class="exercise-item">
+              <input type="checkbox" id="exercise-1" class="exercise-toggle">
+              <label for="exercise-1" class="exercise-header">
+                <h4 class="exercise-name">Tríceps pulley</h4>
+                <span class="exercise-icon">▼</span>
+              </label>
+              <div class="exercise-details">
+                <div class="serie-item">
+                  <span class="serie-number">Série 1</span>
+                  <span class="serie-reps">12 reps</span>
+                  <span class="serie-weight">40 kg</span>
+                </div>
+                <div class="serie-item">
+                  <span class="serie-number">Série 2</span>
+                  <span class="serie-reps">10 reps</span>
+                  <span class="serie-weight">45 kg</span>
+                </div>
+              </div>
+            </div>
+            <div class="exercise-item">
+              <input type="checkbox" id="exercise-1" class="exercise-toggle">
+              <label for="exercise-1" class="exercise-header">
+                <h4 class="exercise-name">Tríceps testa</h4>
+                <span class="exercise-icon">▼</span>
+              </label>
+              <div class="exercise-details">
+                <div class="serie-item">
+                  <span class="serie-number">Série 1</span>
+                  <span class="serie-reps">12 reps</span>
+                  <span class="serie-weight">40 kg</span>
+                </div>
+                <div class="serie-item">
+                  <span class="serie-number">Série 2</span>
+                  <span class="serie-reps">10 reps</span>
+                  <span class="serie-weight">45 kg</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="exercise-item">
+              <input type="checkbox" id="exercise-2" class="exercise-toggle">
+              <label for="exercise-2" class="exercise-header">
+                <h4 class="exercise-name">Tríceps Corda</h4>
+                <span class="exercise-icon">▼</span>
+              </label>
+              <div class="exercise-details">
+                <div class="serie-item">
+                  <span class="serie-number">Série 1</span>
+                  <span class="serie-reps">15 reps</span>
+                  <span class="serie-weight">20 kg</span>
+                </div>
+                <div class="serie-item">
+                  <span class="serie-number">Série 2</span>
+                  <span class="serie-reps">12 reps</span>
+                  <span class="serie-weight">25 kg</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Treino B - Pendente -->
+        <div class="workout-card">
+          <div class="workout-header">
+            <h3 class="workout-title">Treino B - Costas/Bíceps</h3>
+            <div>
+              <span class="workout-date">04/06/2024</span>
+              <span class="workout-status status-pending">Pendente</span>
+            </div>
+          </div>
+          <div class="exercise-list">
+            <div class="exercise-item">
+              <input type="checkbox" id="exercise-3" class="exercise-toggle">
+              <label for="exercise-3" class="exercise-header">
+                <h4 class="exercise-name">Puxada Alta</h4>
+                <span class="exercise-icon">▼</span>
+              </label>
+              <div class="exercise-details">
+                <div class="not-completed">Aguardando realização</div>
+              </div>
+            </div>
+            <div class="exercise-item">
+              <input type="checkbox" id="exercise-3" class="exercise-toggle">
+              <label for="exercise-3" class="exercise-header">
+                <h4 class="exercise-name">Puxada Alta</h4>
+                <span class="exercise-icon">▼</span>
+              </label>
+              <div class="exercise-details">
+                <div class="not-completed">Aguardando realização</div>
+              </div>
+            </div>
+            <div class="exercise-item">
+              <input type="checkbox" id="exercise-3" class="exercise-toggle">
+              <label for="exercise-3" class="exercise-header">
+                <h4 class="exercise-name">Puxada Alta</h4>
+                <span class="exercise-icon">▼</span>
+              </label>
+              <div class="exercise-details">
+                <div class="not-completed">Aguardando realização</div>
+              </div>
+            </div>
+            <div class="exercise-item">
+              <input type="checkbox" id="exercise-3" class="exercise-toggle">
+              <label for="exercise-3" class="exercise-header">
+                <h4 class="exercise-name">Puxada Alta</h4>
+                <span class="exercise-icon">▼</span>
+              </label>
+              <div class="exercise-details">
+                <div class="not-completed">Aguardando realização</div>
+              </div>
+            </div>
+            <div class="exercise-item">
+              <input type="checkbox" id="exercise-3" class="exercise-toggle">
+              <label for="exercise-3" class="exercise-header">
+                <h4 class="exercise-name">Puxada Alta</h4>
+                <span class="exercise-icon">▼</span>
+              </label>
+              <div class="exercise-details">
+                <div class="not-completed">Aguardando realização</div>
+              </div>
+            </div>
+            <div class="exercise-item">
+              <input type="checkbox" id="exercise-3" class="exercise-toggle">
+              <label for="exercise-3" class="exercise-header">
+                <h4 class="exercise-name">Puxada Alta</h4>
+                <span class="exercise-icon">▼</span>
+              </label>
+              <div class="exercise-details">
+                <div class="not-completed">Aguardando realização</div>
+              </div>
+            </div>
+            <div class="exercise-item">
+              <input type="checkbox" id="exercise-3" class="exercise-toggle">
+              <label for="exercise-3" class="exercise-header">
+                <h4 class="exercise-name">Puxada Alta</h4>
+                <span class="exercise-icon">▼</span>
+              </label>
+              <div class="exercise-details">
+                <div class="not-completed">Aguardando realização</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Treino C - Não Concluído -->
+        <div class="workout-card">
+          <div class="workout-header">
+            <h3 class="workout-title">Treino C - Perna/Ombro</h3>
+            <div>
+              <span class="workout-date">06/06/2024</span>
+              <span class="workout-status status-not-completed">Não concluído</span>
+            </div>
+          </div>
+          <div class="exercise-list">
+            <div class="exercise-item">
+              <input type="checkbox" id="exercise-4" class="exercise-toggle">
+              <label for="exercise-4" class="exercise-header">
+                <h4 class="exercise-name">Agachamento Livre</h4>
+                <span class="exercise-icon">▼</span>
+              </label>
+              <div class="exercise-details">
+                <div class="not-completed">Exercício não realizado</div>
+              </div>
+            </div>
+          </div>
+          <div class="exercise-list">
+            <div class="exercise-item">
+              <input type="checkbox" id="exercise-4" class="exercise-toggle">
+              <label for="exercise-4" class="exercise-header">
+                <h4 class="exercise-name">Agachamento Livre</h4>
+                <span class="exercise-icon">▼</span>
+              </label>
+              <div class="exercise-details">
+                <div class="not-completed">Exercício não realizado</div>
+              </div>
+            </div>
+          </div>
+          <div class="exercise-list">
+            <div class="exercise-item">
+              <input type="checkbox" id="exercise-4" class="exercise-toggle">
+              <label for="exercise-4" class="exercise-header">
+                <h4 class="exercise-name">Agachamento Livre</h4>
+                <span class="exercise-icon">▼</span>
+              </label>
+              <div class="exercise-details">
+                <div class="not-completed">Exercício não realizado</div>
+              </div>
+            </div>
+          </div>
+          <div class="exercise-list">
+            <div class="exercise-item">
+              <input type="checkbox" id="exercise-4" class="exercise-toggle">
+              <label for="exercise-4" class="exercise-header">
+                <h4 class="exercise-name">Agachamento Livre</h4>
+                <span class="exercise-icon">▼</span>
+              </label>
+              <div class="exercise-details">
+                <div class="not-completed">Exercício não realizado</div>
+              </div>
+            </div>
+          </div>
+          <div class="exercise-list">
+            <div class="exercise-item">
+              <input type="checkbox" id="exercise-4" class="exercise-toggle">
+              <label for="exercise-4" class="exercise-header">
+                <h4 class="exercise-name">Agachamento Livre</h4>
+                <span class="exercise-icon">▼</span>
+              </label>
+              <div class="exercise-details">
+                <div class="not-completed">Exercício não realizado</div>
+              </div>
+            </div>
+          </div>
+          <div class="exercise-list">
+            <div class="exercise-item">
+              <input type="checkbox" id="exercise-4" class="exercise-toggle">
+              <label for="exercise-4" class="exercise-header">
+                <h4 class="exercise-name">Agachamento Livre</h4>
+                <span class="exercise-icon">▼</span>
+              </label>
+              <div class="exercise-details">
+                <div class="not-completed">Exercício não realizado</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Treino D - Concluído -->
+        <div class="workout-card">
+          <div class="workout-header">
+            <h3 class="workout-title">Treino D - Posterior/Abdômen</h3>
+            <div>
+              <span class="workout-date">08/06/2024</span>
+              <span class="workout-status status-completed">Concluído</span>
+            </div>
+          </div>
+          <div class="exercise-list">
+            <div class="exercise-item">
+              <input type="checkbox" id="exercise-5" class="exercise-toggle">
+              <label for="exercise-5" class="exercise-header">
+                <h4 class="exercise-name">Stiff</h4>
+                <span class="exercise-icon">▼</span>
+              </label>
+              <div class="exercise-details">
+                <div class="serie-item">
+                  <span class="serie-number">Série 1</span>
+                  <span class="serie-reps">10 reps</span>
+                  <span class="serie-weight">30 kg</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="exercise-list">
+            <div class="exercise-item">
+              <input type="checkbox" id="exercise-5" class="exercise-toggle">
+              <label for="exercise-5" class="exercise-header">
+                <h4 class="exercise-name">Stiff</h4>
+                <span class="exercise-icon">▼</span>
+              </label>
+              <div class="exercise-details">
+                <div class="serie-item">
+                  <span class="serie-number">Série 1</span>
+                  <span class="serie-reps">10 reps</span>
+                  <span class="serie-weight">30 kg</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="exercise-list">
+            <div class="exercise-item">
+              <input type="checkbox" id="exercise-5" class="exercise-toggle">
+              <label for="exercise-5" class="exercise-header">
+                <h4 class="exercise-name">Stiff</h4>
+                <span class="exercise-icon">▼</span>
+              </label>
+              <div class="exercise-details">
+                <div class="serie-item">
+                  <span class="serie-number">Série 1</span>
+                  <span class="serie-reps">10 reps</span>
+                  <span class="serie-weight">30 kg</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="exercise-list">
+            <div class="exercise-item">
+              <input type="checkbox" id="exercise-5" class="exercise-toggle">
+              <label for="exercise-5" class="exercise-header">
+                <h4 class="exercise-name">Stiff</h4>
+                <span class="exercise-icon">▼</span>
+              </label>
+              <div class="exercise-details">
+                <div class="serie-item">
+                  <span class="serie-number">Série 1</span>
+                  <span class="serie-reps">10 reps</span>
+                  <span class="serie-weight">30 kg</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="exercise-list">
+            <div class="exercise-item">
+              <input type="checkbox" id="exercise-5" class="exercise-toggle">
+              <label for="exercise-5" class="exercise-header">
+                <h4 class="exercise-name">Stiff</h4>
+                <span class="exercise-icon">▼</span>
+              </label>
+              <div class="exercise-details">
+                <div class="serie-item">
+                  <span class="serie-number">Série 1</span>
+                  <span class="serie-reps">10 reps</span>
+                  <span class="serie-weight">30 kg</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="exercise-list">
+            <div class="exercise-item">
+              <input type="checkbox" id="exercise-5" class="exercise-toggle">
+              <label for="exercise-5" class="exercise-header">
+                <h4 class="exercise-name">Stiff</h4>
+                <span class="exercise-icon">▼</span>
+              </label>
+              <div class="exercise-details">
+                <div class="serie-item">
+                  <span class="serie-number">Série 1</span>
+                  <span class="serie-reps">10 reps</span>
+                  <span class="serie-weight">30 kg</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Treino E - Pendente -->
+        <div class="workout-card">
+          <div class="workout-header">
+            <h3 class="workout-title">Treino E - Full Body</h3>
+            <div>
+              <span class="workout-date">10/06/2024</span>
+              <span class="workout-status status-pending">Pendente</span>
+            </div>
+          </div>
+          <div class="exercise-list">
+            <div class="exercise-item">
+              <input type="checkbox" id="exercise-6" class="exercise-toggle">
+              <label for="exercise-6" class="exercise-header">
+                <h4 class="exercise-name">Burpee</h4>
+                <span class="exercise-icon">▼</span>
+              </label>
+              <div class="exercise-details">
+                <div class="not-completed">Aguardando realização</div>
+              </div>
+            </div>
+          </div>
+          <div class="exercise-list">
+            <div class="exercise-item">
+              <input type="checkbox" id="exercise-6" class="exercise-toggle">
+              <label for="exercise-6" class="exercise-header">
+                <h4 class="exercise-name">Burpee</h4>
+                <span class="exercise-icon">▼</span>
+              </label>
+              <div class="exercise-details">
+                <div class="not-completed">Aguardando realização</div>
+              </div>
+            </div>
+          </div>
+          <div class="exercise-list">
+            <div class="exercise-item">
+              <input type="checkbox" id="exercise-6" class="exercise-toggle">
+              <label for="exercise-6" class="exercise-header">
+                <h4 class="exercise-name">Burpee</h4>
+                <span class="exercise-icon">▼</span>
+              </label>
+              <div class="exercise-details">
+                <div class="not-completed">Aguardando realização</div>
+              </div>
+            </div>
+          </div>
+          <div class="exercise-list">
+            <div class="exercise-item">
+              <input type="checkbox" id="exercise-6" class="exercise-toggle">
+              <label for="exercise-6" class="exercise-header">
+                <h4 class="exercise-name">Burpee</h4>
+                <span class="exercise-icon">▼</span>
+              </label>
+              <div class="exercise-details">
+                <div class="not-completed">Aguardando realização</div>
+              </div>
+            </div>
+          </div>
+          <div class="exercise-list">
+            <div class="exercise-item">
+              <input type="checkbox" id="exercise-6" class="exercise-toggle">
+              <label for="exercise-6" class="exercise-header">
+                <h4 class="exercise-name">Burpee</h4>
+                <span class="exercise-icon">▼</span>
+              </label>
+              <div class="exercise-details">
+                <div class="not-completed">Aguardando realização</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </main>
-
-  <script src="js/studentHistory.js"></script>
 </body>
 </html>

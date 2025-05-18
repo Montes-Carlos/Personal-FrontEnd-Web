@@ -15,7 +15,7 @@
 .info-label {
   display: block;
   font-size: 0.8em;
-  color: #d21919;
+  color: #B50B10;
   margin-bottom: 5px;
 }
 
@@ -61,7 +61,7 @@
 }
 
 .form-section h4 {
-  color: #d21919;
+  color: #B50B10;
   margin-top: 0;
   margin-bottom: 15px;
   padding-bottom: 8px;
@@ -191,7 +191,7 @@
 
 .comparison-controls button {
   padding: 8px 15px;
-  background-color: #d21919;
+  background-color: #B50B10;
   color: white;
   border: none;
   border-radius: 5px;

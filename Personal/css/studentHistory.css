@@ -79,7 +79,7 @@
 }
 
 .workout-title {
-  color: #d21919;
+  color: #B50B10;
   margin: 0;
   font-size: 1.1em;
 }
@@ -137,23 +137,35 @@
 }
 
 .exercise-toggle {
-  font-size: 1.2em;
-  transition: transform 0.3s;
+  position: absolute;
+  opacity: 0;
+  height: 0;
+  width: 0;
 }
 
-.exercise-toggle.open {
-  transform: rotate(180deg);
+.exercise-icon {
+  transition: transform 0.3s ease;
+  font-size: 0.8em;
+  color: #d21919;
 }
 
 .exercise-details {
-  display: none;
-  margin-top: 10px;
-  padding-top: 10px;
-  border-top: 1px solid #444;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  margin-top: 0;
+  padding: 0 10px;
 }
 
-.exercise-details.show {
-  display: block;
+.exercise-toggle:checked ~ .exercise-details {
+  max-height: 500px;
+  margin-top: 10px;
+  padding: 10px;
+  animation: fadeIn 0.3s ease;
+}
+
+.exercise-toggle:checked + .exercise-header .exercise-icon {
+  transform: rotate(180deg);
 }
 
 .serie-item {
@@ -176,14 +188,25 @@
   text-align: right;
 }
 
+.not-completed {
+  color: #999;
+  font-style: italic;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .future-week {
   text-align: center;
   padding: 40px 20px;
   color: #ccc;
   font-size: 1.1em;
-}
-
-.not-completed {
-  color: #999;
-  font-style: italic;
 }

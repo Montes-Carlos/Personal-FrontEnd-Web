@@ -9,38 +9,38 @@
 </head>
 <body>
   <header class="dpj-header">
-  <a href="studentManager.html"><img class="dpj-header-logo" src="img/logo_2.png" alt="Logo DPJ"></a>
-  
-  <div class="dpj-nav-container">
-    <div class="dpj-nav-item">
-      <a href="#" class="dpj-nav-main">Aluno</a>
-      <div class="dpj-dropdown-menu">
-        <a href="studentManager.html" class="dpj-dropdown-item">Gerenciar Alunos</a>
-        <a href="addStudent.html" class="dpj-dropdown-item">Adicionar Aluno</a>
-        <a href="studentDetails.html" class="dpj-dropdown-item">Detalhes do Aluno</a>
-        <a href="studentHistory.html" class="dpj-dropdown-item">Histórico</a>
-      </div>
-    </div>
+    <a href="studentManager.html"><img class="dpj-header-logo" src="img/logo_nome_6.png" alt="Logo DPJ"></a>
     
-    <div class="dpj-nav-item">
-      <a href="#" class="dpj-nav-main">Avaliações</a>
-      <div class="dpj-dropdown-menu">
-        <a href="physicalAssessment.html" class="dpj-dropdown-item">Avaliação Física</a>
-        <a href="posturalAssessment.html" class="dpj-dropdown-item">Avaliação Postural</a>
+    <div class="dpj-nav-container">
+      <div class="dpj-nav-item">
+        <a href="#" class="dpj-nav-main">Aluno</a>
+        <div class="dpj-dropdown-menu">
+          <a href="studentManager.html" class="dpj-dropdown-item">Gerenciar Alunos</a>
+          <a href="addStudent.html" class="dpj-dropdown-item">Adicionar Aluno</a>
+          <a href="studentDetails.html" class="dpj-dropdown-item">Detalhes do Aluno</a>
+          <a href="studentHistory.html" class="dpj-dropdown-item">Histórico</a>
+        </div>
       </div>
-    </div>
-    
-    <div class="dpj-nav-item">
-      <a href="#" class="dpj-nav-main">Treinos</a>
-      <div class="dpj-dropdown-menu">
-        <a href="predefinedWorkouts.html" class="dpj-dropdown-item">Treinos Predefinidos</a>
-        <a href="createWorkout.html" class="dpj-dropdown-item">Criar Treino</a>
+      
+      <div class="dpj-nav-item">
+        <a href="#" class="dpj-nav-main">Avaliações</a>
+        <div class="dpj-dropdown-menu">
+          <a href="physicalAssessment.html" class="dpj-dropdown-item">Avaliação Física</a>
+          <a href="posturalAssessment.html" class="dpj-dropdown-item">Avaliação Postural</a>
+        </div>
       </div>
+      
+      <div class="dpj-nav-item">
+        <a href="#" class="dpj-nav-main">Treinos</a>
+        <div class="dpj-dropdown-menu">
+          <a href="predefinedWorkouts.html" class="dpj-dropdown-item">Treinos Predefinidos</a>
+          <a href="createWorkout.html" class="dpj-dropdown-item">Criar Treino</a>
+        </div>
+      </div>
+      
+      <button class="dpj-logout-btn" onclick="window.location.href='login.html'">Sair</button>
     </div>
-    
-    <button class="dpj-logout-btn" onclick="window.location.href='login.html'">Sair</button>
-  </div>
-</header>
+  </header>
 
   <main>
     <h1>Treinos Predefinidos</h1>
@@ -48,20 +48,64 @@
     <div class="management-container">
       <div class="search-container">
         <div class="search-box">
-          <input type="text" id="searchInput" placeholder="Procurar treino...">
-          <button id="searchButton" class="search-button">🔍</button>
+          <input type="text" placeholder="Procurar treino...">
+          <button class="search-button"><img src="img/lupa_branca.png" alt="" class="lupa"></button>
         </div>
-        <button class="add-button" id="createWorkoutButton">+ Criar Treino</button>
+        <button class="add-button" onclick="window.location.href='createWorkout.html'">+ Criar Treino</button>
       </div>
 
       <div class="workouts-grid">
-        <div class="workouts-list" id="workoutsList"></div>
+        <div class="workouts-list">
+          <!-- Treino 1 -->
+          <div class="workout-card">
+            <div class="workout-button" onclick="window.location.href='createWorkout.html?treino=adaptativo'">
+              <span>Treino Adaptativo</span>
+            </div>
+          </div>
+          
+          <!-- Treino 2 -->
+          <div class="workout-card">
+            <div class="workout-button" onclick="window.location.href='createWorkout.html?treino=hipertrofia'">
+              <span>Treino para Hipertrofia</span>
+            </div>
+          </div>
+          
+          <!-- Treino 3 -->
+          <div class="workout-card">
+            <div class="workout-button" onclick="window.location.href='createWorkout.html?treino=resistencia'">
+              <span>Treino de Resistência</span>
+            </div>
+          </div>
+          
+          <!-- Treino 4 -->
+          <div class="workout-card">
+            <div class="workout-button" onclick="window.location.href='createWorkout.html?treino=definicao'">
+              <span>Treino de Definição</span>
+            </div>
+          </div>
+          
+          <!-- Treino 5 -->
+          <div class="workout-card">
+            <div class="workout-button" onclick="window.location.href='createWorkout.html?treino=iniciante'">
+              <span>Treino para Iniciantes</span>
+            </div>
+          </div>
+          
+          <!-- Treino 6 -->
+          <div class="workout-card">
+            <div class="workout-button" onclick="window.location.href='createWorkout.html?treino=avancado'">
+              <span>Treino Avançado</span>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="pagination" id="pagination"></div>
+      <div class="pagination">
+        <button class="active">1</button>
+        <button>2</button>
+        <button>3</button>
+      </div>
     </div>
   </main>
-
-  <script src="js/predefinedWorkouts.js"></script>
 </body>
 </html>
