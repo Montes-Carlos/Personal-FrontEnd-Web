@@ -3,6 +3,7 @@
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 15px;
   margin-bottom: 30px;
+  
 }
 
 .info-card {
@@ -41,101 +42,153 @@
   display: flex;
   gap: 15px;
   margin-bottom: 20px;
+  align-items: flex-end;
 }
 
 .form-row .input-group {
-  flex: 1;
+  flex: none;
+}
+
+.form-row .input-group:first-child {
+  width: 114px;
+  margin-right: 1%;
+}
+
+.form-row .input-group:nth-child(2) {
+  width: 97px;
 }
 
 .form-sections {
   display: flex;
-  gap: 20px;
+  gap: 15px;
   margin-bottom: 20px;
 }
 
 .form-section {
   flex: 1;
   background-color: #3a3a3a;
-  padding: 15px;
+  padding: 13px;
+  padding-right: 29px;
   border-radius: 8px;
 }
 
 .form-section h4 {
   color: #B50B10;
   margin-top: 0;
-  margin-bottom: 15px;
-  padding-bottom: 8px;
+  margin-bottom: 12px;
+  padding-bottom: 6px;
   border-bottom: 1px solid #555;
+  font-size: 0.95em;
 }
 
 .input-group {
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 .input-group label {
   display: block;
-  margin-bottom: 5px;
-  font-size: 0.85em;
+  margin-bottom: 4px;
+  font-size: 0.8em;
   color: #ccc;
 }
 
 .input-group input {
   width: 100%;
-  padding: 8px;
+  padding: 6px 8px;
   background-color: #2e2e2e;
   border: 1px solid #555;
-  border-radius: 5px;
+  border-radius: 4px;
   color: white;
+  font-size: 0.9em;
+}
+
+.input-group input[type="number"]::-webkit-inner-spin-button,
+.input-group input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.input-group input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
 }
 
 .styled-select {
   position: relative;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
 }
 
 .styled-select label {
   display: block;
-  margin-bottom: 5px;
-  font-size: 0.85em;
+  margin-bottom: 4px;
+  font-size: 0.8em;
   color: #ccc;
 }
 
 .styled-select select {
   width: 100%;
-  padding: 8px 30px 8px 10px;
+  padding: 6px 25px 6px 8px;
   background-color: #2e2e2e;
   border: 1px solid #555;
-  border-radius: 5px;
+  border-radius: 4px;
   color: white;
   appearance: none;
   background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
   background-repeat: no-repeat;
-  background-position: right 8px center;
-  background-size: 15px;
+  background-position: right 6px center;
+  background-size: 12px;
+  font-size: 0.9em;
 }
 
-.save-btn, .delete-btn {
-  padding: 12px;
-  width: 100%;
+.filter-section .styled-select select {
+  width: 185px;
+}
+
+.comparison-controls .styled-select select,
+.delete-section .styled-select select {
+  width: 100px;
+}
+
+.button-group {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.save-btn, .delete-btn, .clear-btn {
+  padding: 8px 12px;
   border: none;
-  border-radius: 5px;
+  border-radius: 4px;
   font-weight: bold;
   cursor: pointer;
   transition: all 0.2s;
+  font-size: 0.9em;
 }
 
 .save-btn {
   background-color: #d21919;
   color: white;
+  width: auto;
 }
 
 .save-btn:hover {
   background-color: #b31f1f;
 }
 
+.clear-btn {
+  background-color: #333;
+  color: white;
+  width: auto;
+}
+
+.clear-btn:hover {
+  background-color: #444;
+}
+
 .delete-btn {
   background-color: #333;
   color: white;
+  width: 80px;
 }
 
 .delete-btn:hover {
@@ -144,72 +197,83 @@
 
 .history-container {
   background-color: #3a3a3a;
-  padding: 20px;
-  border-radius: 10px;
+  padding: 15px;
+  border-radius: 8px;
   box-shadow: 0 3px 10px rgba(0,0,0,0.3);
 }
 
 .history-columns {
   display: flex;
   overflow-x: auto;
-  gap: 15px;
-  padding: 10px 0;
+  gap: 12px;
+  padding: 8px 0;
 }
 
 .history-column {
-  min-width: 280px;
+  min-width: 250px;
   background-color: #2e2e2e;
-  padding: 15px;
-  border-radius: 8px;
+  padding: 12px;
+  border-radius: 6px;
 }
 
 .history-column h3 {
   color: #d21919;
   margin-top: 0;
-  margin-bottom: 15px;
-  font-size: 1em;
+  margin-bottom: 12px;
+  font-size: 0.95em;
 }
 
 .history-column p {
-  margin: 8px 0;
-  font-size: 0.9em;
+  margin: 6px 0;
+  font-size: 0.85em;
 }
 
 .comparison-section {
   background-color: #3a3a3a;
-  padding: 20px;
-  border-radius: 10px;
+  padding: 15px;
+  border-radius: 8px;
   box-shadow: 0 3px 10px rgba(0,0,0,0.3);
 }
 
 .comparison-controls {
   display: flex;
-  gap: 10px;
+  gap: 8px;
   align-items: flex-end;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.comparison-controls .styled-select {
+  margin-bottom: 0;
+}
+
+.comparison-controls .styled-select:first-child {
+  padding-top: 18px;
 }
 
 .comparison-controls button {
-  padding: 8px 15px;
+  padding: 6px 12px;
   background-color: #B50B10;
   color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 4px;
   cursor: pointer;
+  height: 32px;
+  font-size: 0.9em;
 }
 
 .evolution-column {
   background-color: #2e2e2e;
-  padding: 15px;
-  border-radius: 8px;
+  padding: 12px;
+  border-radius: 6px;
 }
 
 .evolution-item {
-  margin-bottom: 10px;
-  padding: 8px;
+  margin-bottom: 8px;
+  padding: 6px;
   background-color: #3a3a3a;
-  border-radius: 5px;
-  font-size: 0.9em;
+  border-radius: 4px;
+  font-size: 0.85em;
 }
 
 .evolution-positive {
@@ -226,16 +290,15 @@
 
 .delete-section {
   display: flex;
-  gap: 10px;
+  gap: 8px;
   align-items: flex-end;
   background-color: #3a3a3a;
-  padding: 20px;
-  border-radius: 10px;
+  padding: 15px;
+  border-radius: 8px;
   box-shadow: 0 3px 10px rgba(0,0,0,0.3);
 }
 
 .delete-section .styled-select {
-  flex: 1;
   margin-bottom: 0;
 }
 

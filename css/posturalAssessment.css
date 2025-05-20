@@ -41,10 +41,12 @@
   display: flex;
   gap: 15px;
   margin-bottom: 20px;
+  align-items: flex-end;
 }
 
 .form-row .input-group {
-  flex: 1;
+  flex: none;
+  width: 140px;
 }
 
 .form-sections {
@@ -57,6 +59,7 @@
   flex: 1;
   background-color: #3a3a3a;
   padding: 15px;
+  padding-right: 32px;
   border-radius: 8px;
 }
 
@@ -94,6 +97,41 @@
   resize: vertical;
 }
 
+.button-group {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.save-btn, .clear-btn, .delete-btn {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.save-btn {
+  background-color: #B50B10;
+  color: white;
+  width: auto;
+}
+
+.save-btn:hover {
+  background-color: #b31f1f;
+}
+
+.clear-btn {
+  background-color: #333;
+  color: white;
+  width: auto;
+}
+
+.clear-btn:hover {
+  background-color: #444;
+}
+
 .styled-select {
   position: relative;
   margin-bottom: 15px;
@@ -108,7 +146,7 @@
 
 .styled-select select {
   width: 100%;
-  padding: 8px 30px 8px 10px;
+  padding: 6px 25px 6px 8px;
   background-color: #2e2e2e;
   border: 1px solid #555;
   border-radius: 5px;
@@ -120,28 +158,14 @@
   background-size: 15px;
 }
 
-.save-btn, .delete-btn {
-  padding: 12px;
-  width: 100%;
-  border: none;
-  border-radius: 5px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: all 0.2s;
-}
-
-.save-btn {
-  background-color: #B50B10;
-  color: white;
-}
-
-.save-btn:hover {
-  background-color: #b31f1f;
+.delete-section .styled-select select {
+  width: 130px;
 }
 
 .delete-btn {
   background-color: #333;
   color: white;
+  width: 80px;
 }
 
 .delete-btn:hover {
@@ -197,7 +221,7 @@
 
 .images-row {
   display: flex;
-  gap: 15px;
+  gap: 1%;
   margin-bottom: 20px;
 }
 
@@ -259,14 +283,9 @@
 .delete-section {
   display: flex;
   gap: 10px;
-  align-items: flex-end;
+  align-items: center; 
   background-color: #3a3a3a;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 3px 10px rgba(0,0,0,0.3);
-}
-
-.delete-section .styled-select {
-  flex: 1;
-  margin-bottom: 0;
 }
